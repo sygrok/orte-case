@@ -1,0 +1,27 @@
+<section>
+<table>
+  <thead>
+    <tr>
+      <th colspan="4">Summary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of cartItems">
+      <td><img [src]="item.product.img"></td>
+      <td>{{item.product.name}}</td>
+      <td>{{item.quantity}}</td>
+      <td>{{item.product.price | currency}}<button class="btn-delete" (click)="deleteItem(item.product)">X</button></td>
+    </tr>
+  </tbody>
+ 
+  <tfoot>
+    <tr>
+      <td style="background-color: green; color: white; border-radius: 0 15px 15px 0;" colspan="1">Total: {{ cartService.total.toFixed(2) | currency }}</td>
+      <td colspan="1"><button class="btn" (click)="applyDiscount()">%20 discount</button></td>
+      <td colspan="1"><button class="btn" (click)="checkout()">Complete Order</button></td>
+      <td colspan="1"><button class="btn" routerLink="">Back to Homepage</button></td>
+    </tr>
+  </tfoot>
+
+</table>
+</section>

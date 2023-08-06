@@ -1,0 +1,22 @@
+<body>
+  <section class="products-container">
+
+    <div class="container" *ngFor="let product of products">
+        <div>
+          <div class="image">
+            <img [src]="product.img">
+          </div>
+          <h1> {{product.name}}</h1>
+          <p>{{product.description}}</p>
+        </div>
+         <div> 
+          <button class="btn outline" >{{product.size}}</button>
+          <button class="btn outline" >{{product.stock}}</button>
+          <button class="btn outline" >{{product.price | currency}}</button>
+          <button class="btn fill" (click)="addToCart(product)">Buy</button>
+        </div>
+    </div>
+</section>
+
+</body>
+

@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+* {
+    font-family: 'Righteous', sans-serif;
+}
+
+nav {
+    background-color: #020024;
+    filter: drop-shadow(0 30px 15px rgba(0, 0, 0, 0.30));
+    z-index: 2;
+    position: relative;
+}
+
+.dropbtn,
+.home-button {
+    background-color: #275449;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown,
+.home {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: lightblue;
+}
+
+.total {
+    background-color: white !important;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    z-index: 8489;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropbtn:hover,
+.home-button:hover {
+    background-color: #3e8e41;
+}
+
+.cart {
+    background-color: #3e8e41 !important;
+    color: white !important;
+}
+
+.cart:hover {
+    background-color: #33a837 !important;
+}

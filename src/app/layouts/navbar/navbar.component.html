@@ -1,0 +1,29 @@
+<!-- <nav>
+
+    <div class="dropdown">
+      <button class="dropbtn">Dropdown</button>
+      <div class="dropdown-content">
+        <a href="#" *ngFor="let item of cartItems">{{item.product.name}}<br>Adet:{{item.quantity}}&nbsp;Fiyat:{{item.product.price | currency}}</a>
+        <a href="#">Toplam:{{cartService.total.toFixed(2) | currency}}</a>
+        <a href="#"routerLink="/cart">Sepete Git</a>
+      </div>
+    </div>
+    
+  </nav> -->
+
+  <nav>
+    <div class="home">
+      <button class="home-button" routerLink="">Home</button>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Cart</button>
+      <div class="dropdown-content">
+        <a href="#"*ngFor="let item of cartItems">{{item.product.name}}<br>Quantity:{{item.quantity}}&nbsp;Price:{{item.product.price | currency}} </a>
+        <a href="#" class="total">Total Price:{{cartService.total.toFixed(2) | currency}}</a>
+        <a class="cart" href="#"routerLink="/cart">Check Out</a>
+      </div>
+    </div>  
+  </nav>
+ 
+
+
